@@ -8,6 +8,7 @@
 * git commit -m "内容"
 * git push origin master
 * git clone https://github.com/hao163/JavaScript
+* git pull
 
 # Sublime Text3安装markdown  
 ### 按住ctrl + shift + P分别输入  
