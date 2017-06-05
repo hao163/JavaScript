@@ -1,4 +1,4 @@
-# Github操作
+﻿# Github操作
 * git init
 * git remote -v
 * git config --global user.email "you@example.com"  
@@ -8,7 +8,7 @@
 * git commit -m "内容"
 * git push origin master
 * git clone https://github.com/hao163/JavaScript
-* git pull
+* git pull origin master
 
 # Sublime Text3安装markdown  
 ### 按住ctrl + shift + P分别输入  
