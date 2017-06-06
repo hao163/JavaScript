@@ -1,5 +1,5 @@
 window.onload=function(){
-	var base=new Base();
-	base.getId('box').css('color','red').css('backgroundColor','black');
-
+	$().getId('box').css('color','green');
+	$().getTagName('p').css('color','red');
 }
+	
