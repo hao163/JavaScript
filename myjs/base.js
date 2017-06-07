@@ -39,6 +39,9 @@ Base.prototype.getTagName=function(tag){
 //设置Css
 Base.prototype.css=function(attr,value){
 	for(var i=0;i<this.elements.length;i++){
+		if(arguments==1){
+			return this.elements[i].style[attr];
+		}
 		this.elements[i].style[attr]=value;
 	}
 	return this;
@@ -47,6 +50,9 @@ Base.prototype.css=function(attr,value){
 //设置Html
 Base.prototype.html=function(str){
 	for(var i=0;i<this.elements.length;i++){
+		if(arguments.length==0){
+			return this.elements[i].innerHTML;
+		}
 		this.elements[i].innerHTML=str;
 	}
 	return this;
