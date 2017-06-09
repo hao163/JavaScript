@@ -36,11 +36,44 @@ Base.prototype.getTagName=function(tag){
 	return this;
 }
 
+//获取class节点数组 增加区域选择
+Base.prototype.getClass=function(className,idName){
+	var node=null
+	if(arguments.length==2){
+        node=document.getElementById(idName);
+	}else{
+        node=document;
+	}
+	var all=node.getElementsByTagName('*');
+	for(var i=0;i<all.length;i++){
+		if(all[i].className==className){
+			this.elements.push(all[i]);
+		}
+	}
+	return this;
+}
+
+//获取某一个class
+
+Base.prototype.getElement=function(num){
+	var element=this.elements[num];
+	this.elements=[];
+	this.elements[0]=element;
+	return this;
+
+}
+
 //设置Css
 Base.prototype.css=function(attr,value){
 	for(var i=0;i<this.elements.length;i++){
-		if(arguments==1){
-			return this.elements[i].style[attr];
+		if(arguments.length==1){//获取外部CSS
+			if(typeof window.getComputedStyle!='undeinfed'){//W3C
+				return window.getComputedStyle(this.elements[i],null)[attr];
+			}else if(typeof this.elements[i].currentStyle!='undeinfed'){//IE
+				return this.elements[i].currentStyle[attr];
+			}
+
+			//return this.elements[i].style[attr];
 		}
 		this.elements[i].style[attr]=value;
 	}
