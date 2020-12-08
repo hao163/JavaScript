@@ -9,7 +9,7 @@
 * git push origin master
 * git clone https://github.com/hao163/JavaScript
 * git pull origin master
-*hi god
+*hi god23
 
 # Sublime Text3安装markdown  
 ### 按住ctrl + shift + P分别输入  
