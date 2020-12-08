@@ -9,7 +9,8 @@
 * git push origin master
 * git clone https://github.com/hao163/JavaScript
 * git pull origin master
-hi
+*hi god
+
 # Sublime Text3安装markdown  
 ### 按住ctrl + shift + P分别输入  
 * package control install  
